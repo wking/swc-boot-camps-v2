@@ -1,0 +1,47 @@
+---
+layout: bootcamp
+root: .
+venue: University of Manchester
+address: Room IT407, Information Technology Building, University of Manchester, Oxford Road, M13 9PL
+country: United-Kingdom
+humandate: Jan 14-15, 2014
+humantime: 9:00 am - 4:30 pm
+startdate: 2014-01-14
+enddate: 2014-01-15
+latlng: 53.467972,-2.233154
+registration: restricted
+instructor: ["Michael Croucher","Jos Martin","Shoaib Sufi","Aleksandra Pawlik"]
+contact: admin-uk@software-carpentry.org
+---
+{% include bootcamps/instructors.html %}
+{% include bootcamps/what.html %}
+{% include bootcamps/who.html %}
+{% include bootcamps/requirements.html %}
+<p>
+  <strong>Content:</strong> The syllabus for this boot camp will include:
+</p>
+<ul>
+  <li>using the shell to do more in less time</li>
+  <li>using Git to manage and share information</li>
+  <li>basic and intermediate MATLAB programming</li>
+  <li>how (and how much) to test programs</li>
+  <li>documentation and debugging</li>
+</ul>
+{% include bootcamps/contact.html %}
+
+<hr/>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h2>Setup</h2>
+    {% include setup/overview-bash.html %}
+    {% include setup/overview-editor.html %}
+    {% include setup/overview-git.html %}
+  </div>
+  <div class="span6">
+    <h2>Reference Guides</h2>
+    <ul>
+      <li><a href="{{page.root}}/lessons/ref/shell.html">The Unix Shell</a></li>
+    </ul>
+  </div>
+</div>
