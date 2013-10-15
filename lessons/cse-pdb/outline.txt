@@ -1,0 +1,79 @@
+Outline of topics to cover in debugging in Python
+
+
+Various versions of this have been floating around:  I recomposed this based on the original psychological definitions.  It's even more poignant if you realize that what the brackets cover is death.
+
+Denial — "I feel fine."; "This can't be happening, not to me."
+    Denial is usually only a temporary defense for the individual.
+Anger — "Why me? It's not fair!"; "How can this happen to me?"; '"Who is to blame?"
+    Because of anger, the person is very difficult to care for due to misplaced feelings of rage and envy.
+Bargaining — "I'll do anything for a few more years."; "I will give my life savings if..."
+    The third stage involves the hope that the individual can somehow postpone or delay death.
+Depression — "I'm so sad, why bother with anything?"; "I'm going to die soon so what's the point?"; "I miss my loved one, why go on?"
+    During the fourth stage, the grieving person begins to understand the certainty of death.
+Acceptance — "It's going to be okay."; "I can't fight it, I may as well prepare for it."
+    In this last stage, individuals begin to come to terms with their mortality.
+
+Types:
+    Exceptions:  invoke live with examples in ipython ("(hga")
+        SyntaxError # You're probably missing a parenthesis or colon
+        NameError   # There's probably a variable name typo somewhere
+        TypeError   # You're doing something with incompatible variable types
+        ValueError  # You're calling a function with the wrong parameter
+        IOError     # You're trying to use a file that doesn't exist
+        IndexError  # You're trying to reference a list element that doesn't exist
+        KeyError    # Similar to an IndexError, but for dictionaries
+	ZeroDivisionError	# Three guesses...
+        Exception   # This means "an error of any type" - hopefully you don't see it often
+    Errors
+        
+    Tracebacks
+        
+
+    Throwing & catching
+        You should rarely write your own exception handling.  In particular, exception handling lies perilously close to "goto" spaghetti code because you aren't required to preserve scope.
+        Basically, don't violate the Principle of Least Astonishment:  The Principle of Least Astonishment states that the result of performing some operation should be obvious, consistent, and predictable, based upon the name of the operation and other clues.
+        
+        However, that said there will be times when you wish to use it, and there will be times when you need to read it (which is easy).  So we will cover the basic syntax.  In addition, Python internally uses exceptions to handle control flow (StopIteration exception raised if no further items in iterator)---even for loops rely on this.
+http://stackoverflow.com/questions/729379/why-not-use-exceptions-as-regular-flow-of-control
+if you use exceptions for normal situations, how do you locate unusual (ie exceptional) situations ?
+My rule of thumb is:
+If you can do anything to recover from an error, catch exceptions
+If the error is a very common one (eg. user tried to log in with the wrong password), use returnvalues
+If you can't do anything to recover from an error, leave it uncatched (Or catch it in your main-catcher to do some semi-gracefull shutdown of the application)
+plus good example of when it is ambiguous
+In Python, exception handling is not appreciably slower, and from a CS standpoint there are good arguments to use it.  However, scientific programmers typically get bogged down in the software development theory and so I think it's better to avoid it typically.  It impacts code readability in Python due to the indenting as well.
+The proof:  I wrote a code with a division by zero in a loop in a function and tested it with and without error handling.  On average, with error handling it was within 0.002 s of difference!
+Anyway, Exceptions are just plain awful. Either you have to handle them one level up from the throwing function (in which case you could have just returned an error code), or you have to pass them to higher and higher levels, each of which is less likely than the last to be able to handle it sensibly. Or you have to crash the process, which you might as well have done in the first place.
+http://www.developers.slashdot.org/story/12/03/16/1947252/van-rossum-python-not-too-slow
+
+        try/except/finally:
+            
+            
+            finally:  A finally block always executes, even if you return before it would typically be arrived at.
+
+
+Techniques:
+    Linting
+    Debugging
+        Invoking debugging:  in-code (pdb.set_trace()); python -d; ipython %pdb and %debug
+        Bang notation in ipython v. pdb
+
+pep8, autopep8
+easy_install pep8
+
+And now abideth faith, hope, charity, these three; but the greatest of these is [hope]. (1 Cor. 13:13, KJV)
+
+From the Zen of Python:  "In the face of ambiguity, refuse the temptation to guess."
+
+    Profiling
+
+
+My practice:  mostly I have been writing short tools to perform specific tasks such as retrieving data from a database.  I have a very mixed workflow:  I still write a lot in C++ as well as Python, and I use Excel a lot as well.  So what I will show you are a couple of short programs ...
+
+
+
+-bash: python4: command not found
+
+A.M.D.G.
+
