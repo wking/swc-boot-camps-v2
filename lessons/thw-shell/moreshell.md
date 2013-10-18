@@ -30,7 +30,6 @@ If this is what you see, you have the right table.  If not, you may need to trou
 ## Let's move and copy the data:
 Let's move the data into the repo directory. This is what we would do if it were really our project: we'd have a folder named "Future Nature Paper" and place our data in it, rather than clogging up our home directory. The command `mv` moves the data:
 
-	mv process-index.py ~/{{page.bootcamp_slug}}
 	mv Metahit_index.txt ~/{{page.bootcamp_slug}}
 	
 Move the other three python scripts we downloaded to the same directory.
