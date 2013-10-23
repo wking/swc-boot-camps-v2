@@ -1,0 +1,3 @@
+[submodule "get-my-ip"]
+	path = get-my-ip
+	url = git://tremily.us/swc-setup-get-my-ip.git
