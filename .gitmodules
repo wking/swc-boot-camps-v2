@@ -1,3 +1,6 @@
 [submodule "get-my-ip"]
 	path = get-my-ip
 	url = git://tremily.us/swc-setup-get-my-ip.git
+[submodule "windows-installer"]
+	path = windows-installer
+	url = git://tremily.us/swc-setup-windows-installer.git
