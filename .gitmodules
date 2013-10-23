@@ -4,3 +4,6 @@
 [submodule "windows-installer"]
 	path = windows-installer
 	url = git://tremily.us/swc-setup-windows-installer.git
+[submodule "installation-test"]
+	path = installation-test
+	url = git://tremily.us/swc-setup-installation-test.git
