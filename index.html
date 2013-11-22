@@ -1,38 +1,55 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
-country: United-States
-humandate: June 17-18, 2020
+venue: University of Manchester
+address: Room IT407, Information Technology Building, University of Manchester, Oxford Road, M13 9PL
+country: United-Kingdom
+humandate: Jan 14-15, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-01-14
+enddate: 2014-01-15
+latlng: 53.467972,-2.233154
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-contact: random@software-carpentry.org
+instructor: ["Michael Croucher", "Jos Martin", "Shoaib Sufi", "Aleksandra Pawlik"]
+contact: admin-uk@software-carpentry.org
 ---
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-      <br/>
-      Please also see
-      the <a href="{{page.root}}/lessons/index.html">index to our lessons</a>
-      and the <a href="{{page.root}}/lessons/setup.html">index to setup instructions</a>.
-  </em></strong></p>
-</div>
 {% include bootcamps/instructors.html %}
 {% include bootcamps/what.html %}
 {% include bootcamps/who.html %}
 {% include bootcamps/requirements.html %}
-{% include bootcamps/python.html %}
 {% include bootcamps/contact.html %}
+
+
+<div>
+
+<h2> Timetable: </h2>
+<p>Wednesday, 14th January</p>
+<ul>
+<li>9:00 - 9:30 Arrival and setup </li>
+<li>9:30 - 9:45 Welcome </li>
+<li> 9:45 - 10:30 Using the shell to do more in less time p.1</li>
+<li> 10:30 - 11:00 Break</li>
+<li> 11:00 - 12:00 Using the shell to do more in less time p.2</li>
+<li> 12:00 - 13:00 Lunch</li>
+<li> 13:00 - 15:30 Using version control to manage and share information</li> 
+<li> 15:30 - 16:00 Break</li>
+<li> 16:00 - 17:00 The MATLAB Language and Desktop Environment p.1</li>
+</ul>
+
+<p>Thursday, 15th January</p>
+<ul>
+<li> 9:00 - 10:00  The MATLAB Language and Desktop Environment p.2</li>
+<li> 10:00 - 10:30 Algorithm Design in MATLAB </li>
+<li> 10:30 - 11:00 Break
+<li> 11:00 - 12:00 Algorithm Design in MATLAB </li>
+<li> 12:00 - 13:00 Lunch</li>
+<li> 13:00 - 15:30 Test and Verification of MATLAB Code </li>
+<li> 15:30 - 16:00 Break </li>
+<li> 16:00 - 17:15 Debugging and Improving Performance </li>
+<li> 17:15 - 17:30 Wrap-up</li> 
+</ul>
+
+
 
 <hr/>
 
@@ -42,48 +59,25 @@ contact: random@software-carpentry.org
   <div class="span6">
     {% include setup/overview-bash.html %}
     {% include setup/overview-editor.html %}
+     {% include setup/overview-git.html %}
+   
   </div>
   <div class="span6">
-    {% include setup/overview-git.html %}
-    {% include setup/overview-python.html %}
+   
+     <div class="setup setup-bash">
+      <h3>MATLAB</h3>
+        <p>
+       The attendees will need access to MATLAB R2013b and Statistics Toolbox. Trial licenses for all products will be available for the duration of the training.     </p>
+       <p>
+  The attendees are recommended to use 3rd party trial type. The license will start whenever it is issued and end a few days after the class. This will provide a few extra days for the attendees to play around with MATLAB before it ceases to start up.
+      </p>
+   </div>
+
+ 
   </div>
 </div>
 
-<hr/>
 
-<h2>Topics</h2>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3><a href="lessons/swc-shell/tutorial.html">The Unix Shell</a></h3>
-    <ul>
-      <li>{% include guide-shell/intro/title.md %}</li>
-      <li>{% include guide-shell/filedir/title.md %}</li>
-      <li>{% include guide-shell/create/title.md %}</li>
-      <li>{% include guide-shell/pipefilter/title.md %}</li>
-      <li>{% include guide-shell/loop/title.md %}</li>
-      <li>{% include guide-shell/scripts/title.md %}</li>
-      <li>{% include guide-shell/find/title.md %}</li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3><a href="lessons/swc-db/tutorial.html">Databases</a></h3>
-    <ul>
-      <li>{% include guide-db/select/title.md %}</li>
-      <li>{% include guide-db/distinct/title.md %}</li>
-      <li>{% include guide-db/filter/title.md %}</li>
-      <li>{% include guide-db/calc/title.md %}</li>
-      <li>{% include guide-db/sort/title.md %}</li>
-      <li>{% include guide-db/null/title.md %}</li>
-      <li>{% include guide-db/aggregate/title.md %}</li>
-      <li>{% include guide-db/grouping/title.md %}</li>
-      <li>{% include guide-db/join/title.md %}</li>
-      <li>{% include guide-db/create/title.md %}</li>
-      <li>{% include guide-db/transactions/title.md %}</li>
-      <li>{% include guide-db/programming/title.md %}</li>
-    </ul>
-  </div>
-</div>
 
 <hr/>
 
