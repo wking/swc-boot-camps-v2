@@ -66,23 +66,36 @@ contact: admin-uk@software-carpentry.org
 <div class="row-fluid">
   <div class="span6">
     {% include setup/overview-bash.html %}
-    {% include setup/overview-editor.html %}
-     {% include setup/overview-git.html %}
-   
+    {% include setup/windows-bash.html %}
+    {% include setup/macosx-bash.html %}
+    {% include setup/linux-bash.html %} 
   </div>
   <div class="span6">
-   
-     <div class="setup setup-bash">
-      <h3>MATLAB</h3>
+    {% include setup/overview-editor.html %}
+    {% include setup/windows-editor.html %}
+    {% include setup/macosx-editor.html %}
+    {% include setup/linux-editor.html %}
+      
+        
+   </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span6">
+
+    <h3>MATLAB</h3>
         <p>
        The attendees will need access to MATLAB R2013b and Statistics Toolbox. Trial licenses for all products will be available for the duration of the training.     </p>
+       <p>
+        As long as the attendees have a valid academic email address they should be able to access the online tutorials. There is a lot of material available, so even if you have some previous experience of MATLAB, it should be possible to find something useful there prior to the course.
+       </p>
 
-<p>
-As long as the attendees have a valid academic email address they should be able to access the online tutorials. There is a lot of material available, so even if you have some previous experience of MATLAB, it should be possible to find something useful there prior to the course.
-</p>
-   </div>
-
- 
+  </div>
+  <div class="span6">
+     {% include setup/overview-git.html %}
+     {% include setup/linux-git.html %}
+    {% include setup/macosx-git.html %}
+    {% include setup/windows-git.html %}
   </div>
 </div>
 
