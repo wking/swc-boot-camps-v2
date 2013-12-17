@@ -1,96 +1,49 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: University of Wisconsin-Madison
+address: Researcher's Link, Wisconsin Institutes for Discovery
 country: United-States
-humandate: Feb 17-18, 2020
-humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+humandate: Jan 13-14, 2014
+humantime: 8:30 am - 4:30 pm
+startdate: 2014-01-13
+enddate: 2014-01-14
+latlng: 43.07718,-89.40399
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
+instructor: ["Paul Wilson", "Matt Gidden", "Lauren Michael", "Cliff Davis", "Danielle Nielsen", "Aronne Merrelli"]
+eventbrite: 9770502837
 contact: admin@software-carpentry.org
 ---
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-      <br/>
-      Please also see
-      the <a href="{{page.root}}/lessons/index.html">index to our lessons</a>
-      and the <a href="{{page.root}}/lessons/setup.html">index to setup instructions</a>.
-  </em></strong></p>
-</div>
 {% include bootcamps/instructors.html %}
-{% include bootcamps/what.html %}
-{% include bootcamps/who.html %}
-{% include bootcamps/requirements.html %}
-{% include bootcamps/python.html %}
+<p><strong>What:</strong> Our goal is to help UW-Madison researchers using computing in their
+ research to become
+ more productive by teaching basic computing skills like program design, version control,
+ testing, and task automation. In this two-day boot camp, short tutorials will alternate with
+ hands-on practical exercises. Participants will be encouraged both to help one another, and to
+ apply what they have learned to their own research problems during and between sessions.</p>
+<p><strong>Who:</strong> The course is aimed at UW-Madison graduate students, post-docs, staff, and faculty
+ who have basic familiarity with programming concepts (like loops, conditionals, arrays, and
+ functions), but need help translating this knowledge into practical tools to help them work
+ more productively.</p>
+<p><strong>Content:</strong> The syllabus for this boot camp will include:</p>
+<ul>
+<li>using the shell to do more in less time</li>
+<li>using version control to manage and share information</li>
+<li>workflow automation and scripting (with Python as example)</li>
+<li>how (and how much) to test programs</li>
+<li>documentation and debugging</li>
+</ul>
+<p><strong>Requirements:</strong> Participants must bring a laptop with a few specific software 
+packages installed. For full curriculum and setup instructions, please see our 
+<!-- a href="http://uw-madison-aci.github.io/boot-camps/2013-08-28-uwmadison/index.html" -->UW-Madison Boot Camp webpage.<!-- /a --> (Coming soon) </br>
+Note: we'll be relying on the wireless network in the Wisconsin Instititues for Discovery.
+</p>
 {% include bootcamps/contact.html %}
 
-<hr/>
-
-<h2>Setup</h2>
-
-<div class="row-fluid">
-  <div class="span6">
-    {% include setup/overview-bash.html %}
-    {% include setup/overview-editor.html %}
-  </div>
-  <div class="span6">
-    {% include setup/overview-git.html %}
-    {% include setup/overview-python.html %}
-  </div>
-</div>
+<h2> Registration</h2>
+This bootcamp is restricted to members of the UW-Madison community.
+<a href="https://www.eventbrite.com/e/university-of-wisconsin-madison-software-carpentry-boot-camp-registration-9770502837" target="_blank">Register on Eventbrite here</a>
+</br>
 
 <hr/>
 
-<h2>Topics</h2>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3><a href="lessons/swc-shell/tutorial.html">The Unix Shell</a></h3>
-    <ul>
-      <li>{% include guide-shell/intro/title.md %}</li>
-      <li>{% include guide-shell/filedir/title.md %}</li>
-      <li>{% include guide-shell/create/title.md %}</li>
-      <li>{% include guide-shell/pipefilter/title.md %}</li>
-      <li>{% include guide-shell/loop/title.md %}</li>
-      <li>{% include guide-shell/scripts/title.md %}</li>
-      <li>{% include guide-shell/find/title.md %}</li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3><a href="lessons/swc-db/tutorial.html">Databases</a></h3>
-    <ul>
-      <li>{% include guide-db/select/title.md %}</li>
-      <li>{% include guide-db/distinct/title.md %}</li>
-      <li>{% include guide-db/filter/title.md %}</li>
-      <li>{% include guide-db/calc/title.md %}</li>
-      <li>{% include guide-db/sort/title.md %}</li>
-      <li>{% include guide-db/null/title.md %}</li>
-      <li>{% include guide-db/aggregate/title.md %}</li>
-      <li>{% include guide-db/grouping/title.md %}</li>
-      <li>{% include guide-db/join/title.md %}</li>
-      <li>{% include guide-db/create/title.md %}</li>
-      <li>{% include guide-db/transactions/title.md %}</li>
-      <li>{% include guide-db/programming/title.md %}</li>
-    </ul>
-  </div>
-</div>
-
-<hr/>
-
-<h2>Reference Guides</h2>
-
-<ul>
-  <li><a href="{{page.root}}/lessons/ref/shell.html">The Unix Shell</a></li>
-  <li><a href="{{page.root}}/lessons/ref/python.html">Python</a></li>
-  <li><a href="{{page.root}}/lessons/ref/sql.html">SQL</a></li>
-</ul>
