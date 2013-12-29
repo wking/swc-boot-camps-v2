@@ -8,9 +8,7 @@ title: Version Control with Git
 - Use files from exercises to be added to their local repo?
 
 ## Opening
-
-Doug will give intro to version control. 
-
+-Use pdf presentation
 
 (Wolfman and Dracula have been hired by Universal Missions
 (a space services spinoff from Euphoric State University)
