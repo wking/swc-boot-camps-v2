@@ -4,9 +4,9 @@
 - git hub 
 - git fetch+merge vs. pull
 - make sure they are signed up for github.
-- first create their own repo on github (and put their files from yesterday in it?) and then clone ours with some files to work on, or should we just be confident that they will go with it?
 - discuss HEAD
 - discuss revert vs. reset
+- edit to remove the forking aspect. 
 
 
 # Ordering of exercises:
