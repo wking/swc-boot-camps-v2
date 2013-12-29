@@ -1,32 +1,18 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
-country: United-States
-humandate: Feb 17-18, 2020
+venue: University of New Brunswick
+address: Fredericton, New Brunswick
+country: Canada
+humandate: Jan 6-7, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-01-06
+enddate: 2014-01-07
+latlng: 45.947214,-66.640325
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-contact: admin@software-carpentry.org
+instructor: ["Julia Gustavsen", "Ross Dickson"]
+contact: jgustavsen@eos.ubc.ca
 ---
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-      <br/>
-      Please also see
-      the <a href="{{page.root}}/lessons/index.html">index to our lessons</a>
-      and the <a href="{{page.root}}/lessons/setup.html">index to setup instructions</a>.
-  </em></strong></p>
-</div>
 {% include bootcamps/instructors.html %}
 {% include bootcamps/what.html %}
 {% include bootcamps/who.html %}
@@ -35,6 +21,13 @@ contact: admin@software-carpentry.org
 {% include bootcamps/contact.html %}
 
 <hr/>
+<b>Registration:</b> <a href="https://www.eventbrite.ca/e/new-brunswick-software-carpentry-bootcamp-registration-9448285075">Register here at Eventbrite</a>
+
+<h3>STRIKE CONTINGENCY:</h3>  
+<p>There is the possibility of a faculty strike at UNB any time after January 2 
+<a href="http://www.unblabour.ca/">(UNB Bargaining updates)</a>.  
+If a work stoppage should occur, the bootcamp will not take place on Jan 6-7.  
+If that should happen we will attempt to reschedule for a later date.</p>
 
 <h2>Setup</h2>
 
@@ -42,11 +35,15 @@ contact: admin@software-carpentry.org
   <div class="span6">
     {% include setup/overview-bash.html %}
     {% include setup/overview-editor.html %}
+    {% include setup/windows-editor.html %}
   </div>
   <div class="span6">
     {% include setup/overview-git.html %}
+    {% include setup/windows-git.html %}
     {% include setup/overview-python.html %}
+    {% include setup/windows-python.html %}
   </div>
+  {% include setup/vm.html %}
 </div>
 
 <hr/>
@@ -66,23 +63,6 @@ contact: admin@software-carpentry.org
       <li>{% include guide-shell/find/title.md %}</li>
     </ul>
   </div>
-  <div class="span6">
-    <h3><a href="lessons/swc-db/tutorial.html">Databases</a></h3>
-    <ul>
-      <li>{% include guide-db/select/title.md %}</li>
-      <li>{% include guide-db/distinct/title.md %}</li>
-      <li>{% include guide-db/filter/title.md %}</li>
-      <li>{% include guide-db/calc/title.md %}</li>
-      <li>{% include guide-db/sort/title.md %}</li>
-      <li>{% include guide-db/null/title.md %}</li>
-      <li>{% include guide-db/aggregate/title.md %}</li>
-      <li>{% include guide-db/grouping/title.md %}</li>
-      <li>{% include guide-db/join/title.md %}</li>
-      <li>{% include guide-db/create/title.md %}</li>
-      <li>{% include guide-db/transactions/title.md %}</li>
-      <li>{% include guide-db/programming/title.md %}</li>
-    </ul>
-  </div>
 </div>
 
 <hr/>
@@ -92,5 +72,4 @@ contact: admin@software-carpentry.org
 <ul>
   <li><a href="{{page.root}}/lessons/ref/shell.html">The Unix Shell</a></li>
   <li><a href="{{page.root}}/lessons/ref/python.html">Python</a></li>
-  <li><a href="{{page.root}}/lessons/ref/sql.html">SQL</a></li>
 </ul>
