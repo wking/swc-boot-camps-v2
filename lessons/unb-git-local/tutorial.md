@@ -93,7 +93,35 @@ $ git config --global color.ui "auto"
 ```
 
 
-- More setup if people do not have an editor set up. (How to bring this up? don't necessarily want to confuse if people have nano set up)
+-There are a few more configuration variables to set depending on your OS. First, 
+choose a text editor. We recommend that novices use [GNU
+nano](http://en.wikipedia.org/wiki/GNU_nano) because it's easy to use and
+works in most operating systems. Some other options
+might be TextEdit on the Mac, gedit on GNU/Linux or Notepad on Windows. The
+default on many systems is vi, which is not a friendly text editor for beginners.
+If they've installed a better editor for the workshop, use that instead.
+Make sure the editor runs from the command line as configured; use a full path if necessary. 
+
+    $ git config --global core.editor "nano"
+
+The second OS-specific option deals with the different handling of line endings. If they ever collaborate 
+with a computer on another OS, this configuration will prevent headaches.
+
+On Mac:
+
+    $ git config --global core.autocrlf "input"
+
+
+On GNU/Linux:
+
+    $ git config --global core.autocrlf "input"
+
+
+On Windows:
+
+    $ git config --global core.autocrlf "true"
+
+ More setup if people do not have an editor set up. (How to bring this up? don't necessarily want to confuse if people have nano set up)
 On Windows using Notepad++ in the standard
 location for a 64-bit machine, you would use:
 
@@ -351,7 +379,7 @@ $ git add mars.txt
 $ git commit -m "Concerns about Mars's moons on my furry friend"
 [master 34961b1] Concerns about Mars's moons on my furry friend
 ```
-
+--Discuss the pallet example regarding shipping. 
 
 Git insists that we add files to the **set** we want to commit
 before actually committing anything
@@ -372,6 +400,7 @@ and `git commit` then copies them to long-term storage:
 
 The following commands show this in action:
 
+## Exercise: practice adding 1 new file. Add one line to a file called Autobiography.txt. Add and commit this file to git. ##
 ```
 $ echo "But the Mummy will appreciate the lack of humidity" >> mars.txt
 $ git diff
@@ -579,12 +608,41 @@ to back up to earlier revisions,
 `git reset --hard 34961b1` to back up to a particular revision,
 and so on.
 
+
+    git revert <commit hash>
+
+this reverts only this commit
+ you can defintely get conflicts this way, if you revert a commit and get a conflict you resolve it the same way you do when you get any other conflict: manually edit file (or files) in the conflict to remove the 2 conflicting areas, save the file, add the file(s) , commit and then your conflict should be over.
+-like an undo
+
+    git reset <commit hash>
+
+
+this resets all the commits back to this one
+
+we saw :
+`git reset --hard HEAD` 
+
+this gets rid of of any unstaged changes in our  directory.  (--hard resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.)git reset --hard HEAD is a potentially dangerous command, since it throws away all your uncommitted changes. For safety, you should always check that the output of git status is clean (i.e. empty) before using it.git reset without the --hard option resets the commit history, but not the files. With the --hard option the files in working tree are also reset
+
+Undo commits permanently
+
+    $ git commit ...
+    $ git reset --hard HEAD~3   <1>
+
+        The last three commits (HEAD, HEAD^, and HEAD~2) were bad and you do not want to ever see them again. Do not do this if you have already given these commits to somebody else. (See the "RECOVERING FROM UPSTREAM REBASE" section in git-rebase(1) for the implications of doing so.)
+
+
+
+
 But what if we want to recover files *without* losing the work we've done since?
 For example,
 what if we have added some material to the conclusion of our paper that we'd like to keep,
 but we want to get back an earlier version of the introduction?
 To accomplish that,
 we'll need to explore branching.
+
+## Exercise: Reset your repository back 4 commits. 
 
 ## Branching
 
@@ -807,7 +865,7 @@ Merge made by the 'recursive' strategy.
  2 files changed, 2 insertions(+)
  create mode 100644 moons.txt
 ```
-*what does recursive mean?
+*what does recursive mean? Default way that git does merges. Can only use 2 heads and does 3-way merging.
 
 We now have all of our changes in one place:
 
@@ -1069,6 +1127,7 @@ Since we had already resolved the conflicts between
 the copies of `moons.txt` in the `master` and `moons` branches,
 Git brings the result over on its own.
 
+##Exercise: Create new branch Ghostwriter, make changes to autobiography.txt in branch Ghostwriter, add and commit them. Merge these changes into Master (resolve conflicts if necessary). 
 
 ##Git tags
 
@@ -1098,11 +1157,17 @@ To add a tag a tag to a previous commit you type:
 $ git tag Sent_to_PNAS [SHA-1 hash]
 ```
 
-To show all the commits associated with these tags:
+To show all the commit associated with these tags:
 ```
 $ git show Sent_to_PNAS
 ```
 
+Can add tags to old commits, but all tags are unique. 
+To add the tag to an old commit you type (b3a4e is the identifier for your commit)
+git tag -a Version_1 -m "Sent out for review" b3a4e
+
+And to see this in your git log you can type:
+git log --decorate=full
 
 ## .git ignore file -Section to be run during intro to python:
 
@@ -1119,16 +1184,3 @@ $ git status
 ```
 
 No difference, but we see that we do have to add and commit our .gitignore file. Once we do that we see that our files ending in .pyc are being ignored by git. This is also something useful to do with large files or even whole directories that reside within a repository. 
-
-
-
-
-## Exercises--intersperse in the doc ##
-
-* practice adding files
-* create new branch called x
-* make changes in x
-* merge changes in master
-* resolve conflicts.
-* reset head to 4th commit
-* 
