@@ -35,37 +35,52 @@ If a work stoppage should occur, the bootcamp will not take place on Jan 6-7.
 If that should happen we will attempt to reschedule for a later date.</p>
 
 <h2>Setup</h2>
-
-<div class="row-fluid">
-  <div class="span6">
     {% include setup/overview-bash.html %}
     {% include setup/overview-editor.html %}
-    {% include setup/windows-editor.html %}
-  </div>
-  <div class="span6">
     {% include setup/overview-git.html %}
-    {% include setup/windows-git.html %}
     {% include setup/overview-python.html %}
-    {% include setup/windows-python.html %}
+
+ <p>Please follow the setup instructions below (pick the appropriate operating system) to install those tools on the laptop that you will be bringing to the bootcamp. (If you are having problems you can install the VM-virtual machine, but otherwise it is not needed.)
+    </p>
+<h3>Windows</h3>
+<div class="row-fluid">
+  <div class="span6">
+
+    {% include setup/windows-editor.html %}
+    {% include setup/windows-git.html %}
+    {% include setup/windows-bash.html %}
+    {% include setup/windows-editor.html %}
+    {% include setup/windows-anaconda.html %}
+    {% include setup/windows-add-nano.html %}
+ 
+ 
+  </div>
+  
+  <h3>Mac OS/X</h3>
+<div class="row-fluid">
+  <div class="span6">
+  
+{% include setup/macosx-bash.html %}
+{% include setup/macosx-git.html %}
+{% include setup/macosx-editor.html %}
+{% include setup/macosx-anaconda.html %}
+ 
+ 
+  </div>
+  
+    <h3>Linux</h3>
+<div class="row-fluid">
+  <div class="span6">
+  
+{% include setup/linux-bash.html %}
+{% include setup/linux-git.html %}
+{% include setup/linux-editor.html %}
+{% include setup/linux-anaconda.html %}
+ 
+ 
   </div>
   {% include setup/vm.html %}
 </div>
-  <p>Please follow the setup instructions below (pick the appropriate operating system) to install those tools on the laptop that you will be bringing to the bootcamp.
-    </p>
-  </div>
-</div>
-<div class="row-fluid">
-  <div class="span2">
-    <a href="setup/windows.html">Windows</a>
-  </div>
-  <div class="span2">
-    <a href="setup/osx.html">Mac OS/X</a>
-  </div>
-  <div class="span2">
-    <a href="setup/linux.html">Linux</a>
-  </div>
-</div>
-
 <hr/>
 
 <h2>Coffee and Food</h2>
