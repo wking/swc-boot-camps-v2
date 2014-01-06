@@ -40,5 +40,31 @@ eventbrite: 9571796501
   If this sound interesting, please register at the link below.
 </p>
 {% include bootcamps/eventbrite.html %}
-{% include bootcamps/requirements.html %}
 {% include bootcamps/contact.html %}
+
+<h2>Software Setup</h2>
+
+<p>
+  Please set up the following software <em>before</em> you arrive at the bootcamp.
+  (40 people trying to download installers over WiFi at the same time isn't the best start to the day...)
+</p>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h3>Python</h3>
+    {% include setup/macosx-python.html %}
+    {% include setup/windows-python.html %}
+    {% include setup/linux-python.html %}
+  </div>
+  <div class="span6">
+    <h3>A Text Editor</h3>
+    {% include setup/macosx-editor.html %}
+    {% include setup/windows-editor.html %}
+    {% include setup/linux-editor.html %}
+    <hr/>
+    <h3>The Unix Shell</h3>
+    {% include setup/macosx-bash.html %}
+    {% include setup/windows-bash.html %}
+    {% include setup/linux-bash.html %}
+  </div>
+</div>
