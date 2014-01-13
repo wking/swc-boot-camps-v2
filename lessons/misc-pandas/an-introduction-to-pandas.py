@@ -4,7 +4,7 @@
 # Combine head() and tail()
 last_two_dates = data.EDT.tail(2)
 second_to_last_date = last_two_dates.head(1)
-print second_to_last_date
+print(second_to_last_date)
   
 
 ## Exercise 2:
@@ -12,7 +12,7 @@ print second_to_last_date
 
 hottest_temp = data.max_temp.max()  # Highest of the highs  
 coldest_temp = data.min_temp.min()  # Lowest of the lows  
-print "Temperature range:", hottest_temp - coldest_temp, "degrees F"  
+print("Temperature range:", hottest_temp - coldest_temp, "degrees F")  
 
 # Temperature range: 105 degrees F
 
@@ -39,9 +39,9 @@ for date_idx, row in data.iterrows():
         november_rain = True
   
 if november_rain:
-      print "There was rain in November"
+      print("There was rain in November")
 else:
-      print "There was *not* rain in November"
+      print("There was *not* rain in November")
 
  
   ## Exercise 5:
@@ -71,11 +71,11 @@ rain_std = days_with_rain.mean_temp.std()
 snow_std = days_with_snow.mean_temp.std()
   
 if rain_std > snow_std:
-   print "Rainy days were more variable"
+   print("Rainy days were more variable")
 elif snow_std > rain_std:
-   print "Snowy days were more variable"
+   print("Snowy days were more variable")
 else:
-   print "They were the same"
+   print("They were the same")
 
   
 ## Exercise 7:

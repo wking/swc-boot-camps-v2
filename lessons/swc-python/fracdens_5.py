@@ -18,11 +18,11 @@ def handle_args(args):
     return script, options, args
 
 def process(title, filenames):
-    print title
-    print 'files:',
+    print(title)
+    print('files:', end=' ')
     for f in filenames:
-        print f, # eventually replace this with real code
-    print # make sure there's a newline at the end
+        print(f, end=' ') # eventually replace this with real code
+    print() # make sure there's a newline at the end
 
 # Run the program.
 main()

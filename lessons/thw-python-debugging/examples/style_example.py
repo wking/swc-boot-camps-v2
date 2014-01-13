@@ -16,4 +16,4 @@ def HappyGo_lucky():
 
 409
 
-print HappyGo_lucky()
+print(HappyGo_lucky())

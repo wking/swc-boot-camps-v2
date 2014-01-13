@@ -17,5 +17,5 @@ def reversecomplement(record):
 generator = SeqIO.parse("data/test-sequences.fasta", "fasta")
 for seqrecord in generator:
     reversesequence = reversecomplement(seqrecord)
-    print ">%s\nORIG: %s" % (seqrecord.id, seqrecord.seq)
-    print "REVC: %s" % reversesequence
+    print(">%s\nORIG: %s" % (seqrecord.id, seqrecord.seq))
+    print("REVC: %s" % reversesequence)

@@ -22,7 +22,7 @@ version of a particular dependency, and you just want to re-test that
 dependency.
 """
 
-from __future__ import print_function  # for Python 2.6 compatibility
+  # for Python 2.6 compatibility
 
 import distutils.ccompiler as _distutils_ccompiler
 import fnmatch as _fnmatch
@@ -205,7 +205,7 @@ class DependencyError (Exception):
                 version = value[0]
                 break
         package = self.checker.name
-        for (s,v,p),url in self._setup_urls.items():
+        for (s,v,p),url in list(self._setup_urls.items()):
             if (_fnmatch.fnmatch(system, s) and
                     _fnmatch.fnmatch(version, v) and
                     _fnmatch.fnmatch(package, p)):
@@ -767,9 +767,9 @@ class UserTaskDependency (Dependency):
 
     def _check(self):
         if _sys.version_info >= (3, ):
-            result = input(self.prompt)
+            result = eval(input(self.prompt))
         else:  # Python 2.x
-            result = raw_input(self.prompt)
+            result = input(self.prompt)
         return self._check_result(result)
 
     def _check_result(self, result):

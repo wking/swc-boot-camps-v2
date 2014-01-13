@@ -22,7 +22,7 @@ def test_muskox_is_correct():
 
 def test_animal_not_present():
     animrec, animmean = get_sightings(filename, 'NotPresent')
-    print animrec, animmean
+    print(animrec, animmean)
     assert animrec == 0, 'Animal missing should return zero records'
     assert animmean == 0, 'Animal missing should return zero mean'
 

@@ -18,12 +18,12 @@ MARKDOWN_P = re.compile(r'<img\s+src="([^"]+)"\s+alt="([^"]+)"\s*/>')
 IPYNB_P = re.compile(r'<img\s+src=\\"([^"]+)\\" alt=\\"([^"]+)\\"\s*/>')
 
 def main(filenames):
-    print HEADER
+    print(HEADER)
     for f in filenames:
         with open(f, 'r') as reader:
             for line in reader:
                 display(f, line)
-    print FOOTER
+    print(FOOTER)
 
 def display(filename, line):
     for p in (MARKDOWN_P, IPYNB_P):
@@ -32,7 +32,7 @@ def display(filename, line):
         relative_path = m.group(1)
         alt_text = m.group(2)
         modified_path = adjust_path(filename, relative_path)
-        print ENTRY.format(modified_path, alt_text)
+        print(ENTRY.format(modified_path, alt_text))
 
 def adjust_path(base_filename, relative_path):
     fixed = os.path.join(os.path.dirname(base_filename), relative_path)

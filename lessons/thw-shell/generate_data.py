@@ -7,7 +7,7 @@ import calendar
 class Person:
     maxCI = 25
     # teenagers are hereby declared to be between 11 and 20 years old
-    birthyears = range(1991,2000)
+    birthyears = list(range(1991,2000))
     repeatFraction = 0.1
     
     names = ['john', 'paul', 'george', 'ringo',\
@@ -16,8 +16,8 @@ class Person:
     words =['Beatle','Spice','Backstreet','Sync','Jonas',\
         'Lennon','McCartney','Starr','Harrison','Z',\
         'Carrot','Broccoli','Asparagus','Beet']
-    CIs=range(1,maxCI+1)
-    birthmonths= range(1,13)
+    CIs=list(range(1,maxCI+1))
+    birthmonths= list(range(1,13))
     #ensure unique ids
     serialNum=173
     sexes=['M','F','N']
@@ -53,18 +53,18 @@ class Person:
         if (random() > Person.repeatFraction):
             self.repeats = 1
         else:
-            self.repeats=choice(range(2,6))
+            self.repeats=choice(list(range(2,6)))
 
 
 from numpy import polyfit, array
 def test_peopleCorrelations():
     testpeople = []
     npeople = 4000
-    for pnum in xrange(1,npeople):
+    for pnum in range(1,npeople):
         testpeople.append(Person())
 
     data = [[p.age(), p.CI, p.trueVolume, p.trueRange, p.trueDiscrimination] for p in testpeople]
-    ages, cis, vols, ranges, discs = zip(*data)
+    ages, cis, vols, ranges, discs = list(zip(*data))
 
     CIVolParam, dummy   = polyfit(cis, vols, 1) 
     CIRangeParam, dummy = polyfit(cis, ranges, 1) 
@@ -89,14 +89,14 @@ class Measurement:
     incompleteFraction = 0.05
     serialNum = 211
     def randomDate(self):
-        hrs = range(8,17)
-        mins = range(1,60)
-        secs = range(1,60)
-        months = range(5,10)
+        hrs = list(range(8,17))
+        mins = list(range(1,60))
+        secs = list(range(1,60))
+        months = list(range(5,10))
 
         month = choice(months)
         monthname = calendar.month_abbr[month]
-        day = choice(range(1,calendar.monthrange(2011, month)[1]))
+        day = choice(list(range(1,calendar.monthrange(2011, month)[1])))
         dayname = calendar.day_abbr[calendar.weekday(2011, month, day)]
         hr = choice(hrs)
         min = choice(mins)
@@ -231,7 +231,7 @@ def main():
     for i in range(nexperimenters):
         experimenters.append(Datataker())
 
-    for fnum in xrange(min(len(measurements), nfiles)):
+    for fnum in range(min(len(measurements), nfiles)):
         ex = choice(experimenters)
         ex.addmeasurement(measurements[fnum]) 
 

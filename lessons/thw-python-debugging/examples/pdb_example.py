@@ -7,6 +7,6 @@ import pdb
 
 a = 2
 while True:
-    print "This number's gonna get HUGEE"
+    print("This number's gonna get HUGEE")
     pdb.set_trace()
     a *= a

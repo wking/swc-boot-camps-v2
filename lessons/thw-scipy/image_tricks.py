@@ -12,7 +12,7 @@ import scipy.misc
 #First let's read in an image file.  For now, make it a JPEG.
 img = scipy.misc.imread("image.jpg")
 #Note that this really is an array!
-print(str(img))
+print((str(img)))
 
 #We can now apply some basic filters...
 img = scipy.misc.imfilter(img, 'blur')

@@ -8,9 +8,9 @@ Write an if statement that prints whether x is even or odd.
 """
 x = 4
 if x % 2 == 0:
-    print 'x is even'
+    print('x is even')
 else:
-    print 'x is odd'
+    print('x is odd')
 
 """
 Short Exercise
@@ -21,7 +21,7 @@ factorial = 1
 while i <= 42:
     factorial = factorial * i
     i = i + 1
-print factorial
+print(factorial)
 
 """
 Longer Exercise: Converting genotypes

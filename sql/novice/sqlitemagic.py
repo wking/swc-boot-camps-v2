@@ -33,9 +33,9 @@ class SqliteMagic(Magics):
             cursor.execute(query)
             results = cursor.fetchall()
             display(HTML(self.tablify(results)))
-        except Exception, e:
+        except Exception as e:
             import sys
-            print >> sys.stderr, "exception", e
+            print("exception", e, file=sys.stderr)
         cursor.close()
         connection.close()
 

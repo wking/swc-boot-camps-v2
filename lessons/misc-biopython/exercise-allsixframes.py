@@ -21,7 +21,7 @@ def allsixframes(record):
 
 #   Open a fastq file, goes through it record-by-record, and output
 #   the sequence id, the sequence, and the translations 
-print len(sys.argv)
+print(len(sys.argv))
 if len(sys.argv) <= 1:
     filename = "data/test-sequences.fasta"
 else:
@@ -31,6 +31,6 @@ sys.stderr.write("Trying to open %s\n" % filename)
 generator = SeqIO.parse(filename, "fasta")
 for seqrecord in generator:
     sixframes = allsixframes(seqrecord)
-    print ">%s\n%s" % (seqrecord.id, seqrecord.seq)
+    print(">%s\n%s" % (seqrecord.id, seqrecord.seq))
     for i in range(6):
-        print i, sixframes[i]
+        print(i, sixframes[i])

@@ -20,6 +20,7 @@ Usage:
 import sys
 import inspect
 import traceback
+import collections
 
 def run(prefix='test_', verbose=False):
     """
@@ -28,7 +29,7 @@ def run(prefix='test_', verbose=False):
     # Collect functions defined in calling context.
     caller_defs = inspect.stack()[1][0].f_globals
     test_functions = dict([(n, caller_defs[n]) for n in caller_defs
-                           if n.startswith(prefix) and callable(caller_defs[n])])
+                           if n.startswith(prefix) and isinstance(caller_defs[n], collections.Callable)])
     setup = caller_defs.get('setup', None)
     teardown = caller_defs.get('teardown', None)
 
@@ -36,9 +37,9 @@ def run(prefix='test_', verbose=False):
     passes = []
     fails = []
     errors = []
-    for (name, test) in test_functions.iteritems():
+    for (name, test) in test_functions.items():
         if verbose:
-            print name
+            print(name)
         if setup is not None:
             setup()
         try:
@@ -55,15 +56,15 @@ def run(prefix='test_', verbose=False):
             teardown()
 
     # Report.
-    print
-    print '{0} pass, {1} fail, {2} error'.format(len(passes),
+    print()
+    print('{0} pass, {1} fail, {2} error'.format(len(passes),
                                                  len(fails),
-                                                 len(errors))
+                                                 len(errors)))
     for (title, group) in (('fail', fails),
                            ('error', errors)):
         for (name, exc) in group:
-            print '{0}\n{1}: {2}'.format('-'*40, title, name)
-            print exc
+            print('{0}\n{1}: {2}'.format('-'*40, title, name))
+            print(exc)
 
 if __name__ == '__main__':
 

@@ -75,13 +75,13 @@ def prep_data(all_scores):
   '''
 
   # Names of all people in alphabetical order.
-  people = all_scores.keys()
+  people = list(all_scores.keys())
   people.sort()
 
   # Names of all papers in alphabetical order.
   papers = set()
   for person in people:
-    for title in all_scores[person].keys():
+    for title in list(all_scores[person].keys()):
       papers.add(title)
   papers = list(papers)
   papers.sort()
@@ -217,7 +217,7 @@ def recommend(prefs, subject, sim_func):
   # Create the normalized list
   
   rankings = []
-  for title, total in totals.items():
+  for title, total in list(totals.items()):
     rankings.append((total/sim_sums[title], title))
 
   # Return the sorted list
@@ -227,15 +227,15 @@ def recommend(prefs, subject, sim_func):
 
 def test():
   person_ids, paper_ids, all_ratings = prep_data(raw_scores)
-  print 'person_ids', person_ids
-  print 'paper_ids', paper_ids
-  print 'all_ratings', all_ratings
-  print 'similarity distance', sim_distance(all_ratings, 0, 1)
-  print 'similarity Pearson', sim_pearson(all_ratings, 0, 1)
-  print top_matches(all_ratings, 0, 5, sim_pearson)
-  print calculate_similar(paper_ids, all_ratings)
-  print recommend(all_ratings, 0, sim_distance)
-  print recommend(all_ratings, 1, sim_distance)
+  print('person_ids', person_ids)
+  print('paper_ids', paper_ids)
+  print('all_ratings', all_ratings)
+  print('similarity distance', sim_distance(all_ratings, 0, 1))
+  print('similarity Pearson', sim_pearson(all_ratings, 0, 1))
+  print(top_matches(all_ratings, 0, 5, sim_pearson))
+  print(calculate_similar(paper_ids, all_ratings))
+  print(recommend(all_ratings, 0, sim_distance))
+  print(recommend(all_ratings, 1, sim_distance))
 	
 if __name__ == '__main__':
   test()

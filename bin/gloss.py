@@ -47,24 +47,24 @@ def get_gloss_entries(filename):
                     last_seen = text.lower()
                 key = m.group(3)
                 if key in result:
-                    print 'Duplicate key {0} in {1}'.format(key, filename)
+                    print('Duplicate key {0} in {1}'.format(key, filename))
                 result[key] = 0
             for ref in p_use.findall(line):
                 internal.add(ref)
 
     if undone:
-        print '{0} UNDONE'.format(undone)
+        print('{0} UNDONE'.format(undone))
 
     if out_of_order:
-        print 'OUT OF ORDER:'
+        print('OUT OF ORDER:')
         for term in out_of_order:
-            print '   ', term
+            print('   ', term)
 
     missing_internal = internal - set(result.keys())
     if missing_internal:
-        print 'MISSING (INTERNAL):'
+        print('MISSING (INTERNAL):')
         for term in sorted(missing_internal):
-            print '   ', term
+            print('   ', term)
 
     return result
 
@@ -86,18 +86,18 @@ def report_missing(f, known):
                 else:
                     unknown.add(m)
         if unknown:
-            print 'UNDEFINED FROM {0}'.format(f)
+            print('UNDEFINED FROM {0}'.format(f))
             for term in sorted(unknown):
-                print '   ', term
+                print('   ', term)
 
 def report_unused(known):
     '''Report unused glossary entries.'''
     temp = [k for k in known if not known[k]]
     if not temp:
         return
-    print 'UNUSED'
+    print('UNUSED')
     for term in sorted(temp):
-        print '   ', term
+        print('   ', term)
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2:])

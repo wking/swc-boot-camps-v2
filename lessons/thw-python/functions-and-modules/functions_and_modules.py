@@ -30,7 +30,7 @@ def view_cochlear(filename):
     """
     x = open(filename)
     for line in x:
-        print line.strip()
+        print(line.strip())
     x.close()
 
 """
@@ -46,7 +46,7 @@ def view_cochlear(filename):
         if line.strip() == '#':
             continue
         else:
-            print line.strip()
+            print(line.strip())
     x.close()
 
 """

@@ -50,8 +50,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'THW'
-copyright = u'2012, The Hacker Within'
+project = 'THW'
+copyright = '2012, The Hacker Within'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -205,8 +205,8 @@ htmlhelp_basename = 'THWdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'THW.tex', u'THW Documentation',
-   u'The Hacker Within', 'manual'),
+  ('index', 'THW.tex', 'THW Documentation',
+   'The Hacker Within', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -241,6 +241,6 @@ jsmath_path = "jsMath/easy/load.js"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'thw', u'THW Documentation',
-     [u'The HAcker Within'], 1)
+    ('index', 'thw', 'THW Documentation',
+     ['The HAcker Within'], 1)
 ]

@@ -5,4 +5,4 @@ def main():
         process(f)
 
 def process(filename):
-    print filename
+    print(filename)

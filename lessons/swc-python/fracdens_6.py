@@ -50,9 +50,9 @@ def combine(left, right):
     return result
 
 def display(title, counts, scaling):
-    print title
+    print(title)
     for c in counts:
-        print float(c) / scaling
+        print(float(c) / scaling)
 
 # Run the program.
 main()

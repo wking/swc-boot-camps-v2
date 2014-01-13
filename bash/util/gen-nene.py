@@ -24,4 +24,4 @@ assert len(filenames) > 0, \
 for f in filenames:
     with open(os.path.join(output_directory, f), 'w') as writer:
         for i in range(length):
-            print >> writer, random.expovariate(1.0/mean)
+            print(random.expovariate(1.0/mean), file=writer)

@@ -32,11 +32,11 @@ def process(title, filenames):
         display(title, results[0], len(results))
 
 def display(title, data, number):
-    print title
+    print(title)
     scaling = float(number * data.shape[1])
     densities = data.sum(1) / scaling
     for d in densities:
-        print d
+        print(d)
 
 # Run the program.
 main()

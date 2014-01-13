@@ -5,5 +5,5 @@ def mean(numlist):
     except TypeError :
         raise TypeError("The list was not numbers.")
     except :
-        print "Something unknown happened with the list."
+        print("Something unknown happened with the list.")
     return total/length

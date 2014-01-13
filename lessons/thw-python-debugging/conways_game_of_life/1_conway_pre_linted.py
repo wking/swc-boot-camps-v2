@@ -30,4 +30,4 @@ def neighbors(cell):
     return [(x, y), (x+1, y), (x-1, y), (x, y+1), (x, y-1), (x+1, y+1), (x+1, y-1), (x-1, y+1), (x-1, y-1)]
 
 glider = [(0, 0), (1, 0), (2, 0), (0, 1), (1, 2)]
-print conway(glider)
+print(conway(glider))

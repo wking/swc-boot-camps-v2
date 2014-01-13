@@ -14,7 +14,7 @@ def handle_args(args):
     return script, options, args
 
 def process(filename):
-    print filename
+    print(filename)
 
 # Run the program.
 main()

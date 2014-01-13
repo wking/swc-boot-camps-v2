@@ -24,13 +24,13 @@ import hashlib
 try:  # Python 3
     from io import BytesIO as _BytesIO
 except ImportError:  # Python 2
-    from StringIO import StringIO as _BytesIO
+    from io import StringIO as _BytesIO
 import os
 import re
 try:  # Python 3
     from urllib.request import urlopen as _urlopen
 except ImportError:  # Python 2
-    from urllib2 import urlopen as _urlopen
+    from urllib.request import urlopen as _urlopen
 import zipfile
 
 
