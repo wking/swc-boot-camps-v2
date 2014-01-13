@@ -110,7 +110,7 @@ gives :
 But buyer beware! Let's look at the speed of light again.
 
 ```python
-  >>> print("c = %s"%str(scipy.constants.physical_constants["speed of light in vacuum"]))
+  >>> print(("c = %s"%str(scipy.constants.physical_constants["speed of light in vacuum"])))
   >>> c = (299792458.0, 'm s^-1', 0.0)
 ```
 
@@ -658,3 +658,4 @@ listing of associated image functions.
 
 The code above can be found in the image\_tricks.py file in the SciPy
 directory of your repository..
+

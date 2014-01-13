@@ -290,7 +290,7 @@ scalar will repeat that list N times.
   
   >>> numpy.arange(5)*2
   array([0, 2, 4, 6, 8])
-  >>> range(5)*2
+  >>> list(range(5))*2
   [0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
 ```
 
@@ -302,7 +302,7 @@ back.
   
   >>> numpy.arange(5) + numpy.arange(5)
   array([0, 2, 4, 6, 8])
-  >>> range(5) + range(5)
+  >>> list(range(5)) + list(range(5))
   [0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
 ```
 
@@ -468,3 +468,4 @@ selection of them:
  * [NumPy Reference](http://docs.scipy.org/doc/numpy/reference/)
  * [NumPy For Matlab Users](http://www.scipy.org/NumPy_for_Matlab_Users)
  * [NumPy CookBook](http://www.scipy.org/Cookbook) 
+
