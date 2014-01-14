@@ -454,25 +454,74 @@ $ git commit -m "Resolved conflict in journal.txt by rewriting title to combine 
 <p>
 This is where version control proves itself better than DropBox or GoogleDrive, this ability to merge text files line-by-line and highlight the conflicts between them, so no work is ever lost.
 </p>
+<h2>Working from multiple locations with a remote repository </h2>
+<p> We're going to set up a remote repository that we can use from multiple locations. The remote repository can also be shared with colleagues, if we want to.</p>
+<h3> GitHub</h3>
+<p> <a href="http://GitHub.com">GitHub</a> is a web service which allows users to set up their private and public source code Git repositories. It provides tools for browsing, collaborating on and documenting code. Your organisation may also offer support for hosting Git repositories - ask your local system administrator. GitHub, like other services such as<a href="https://launchpad.net"> Launchpad <a/>,<a href="http://bitbucket.org"> Bitucket</a>, <a href="http://code.google.com">GoogleCode</a>, and <a href="http://sourceforge.net">SourceForge</a> provides a wealth of resources to support projects including:
+<ul>
+<li>Time histories changes to repositories</li>
+<li>Commit-triggered e-mails</li>
+<li>Browsing code from within a web browser, with syntax highlighting </li>
+<li>Software release management</li>
+<li> Issue (ticket) and bug tracking</li>
+<li> Download</li>
+<li> Varying permissions for various groups of users</li>
+<li> Other service hooks e.g. to Twitter.</li>
+</ul>
+
+<b>Note</b> GitHub's free repositories have public licences <b>by default</b>. If you don't want to share (in the most liberal sense) your stuff with the world and you want to use GitHub (instead of GitHub), you will need to pay for the private GitHub repositories (GitHub offers up to 5 free private repositories, if you are an academic - but do check this information as terms and conditions  may change).
+</p>
+<h3> Create a new repository</h3>
+<p>
+Now, we can create a repository on GitHub,
+<ul>
+<li>    Log in to GitHub (if you don't have an account, set up one) </li>
+<li>    Click on the Create icon on the top right </li>
+<li>    Enter Repository name: "2014-01-Man-YOURNAME" </li>
+<li>    For the purpose of this exercise we'll create a public repository </li>
+<li>    Make sure the Initialize this repository with a README is unselected </li>
+<li>    Click Create Repository </li>
+</ul>
+You'll get a page with new information about your repository. We already have our local repository and we will be pushing it to GitHub. 
+</p>
+<pre>
+git remote add origin https://github.com/USERNAME/2014-01-Man-YOURNAME.git
+git push -u origin master
+</pre>
+<p> This sets up an alias, origin, to correspond to the URL of our new repository on GitHub. <br/>
+
+Now copy and paste the second line</p>
+<pre>
+$ git push -u origin master
+Counting objects: 38, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (38/38), 3.59 KiB, done.
+Total 38 (delta 9), reused 0 (delta 0)
+To https://github.com/USERNAME/2014-01-Man-YOURNAME.git
+* [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+</pre>
+<p>
+This pushes our master branch to the remote repository, named via the alias origin and creates a new master branch in the remote repository.
+<br/> <br/>
+Now, on GitHub, we should see our code and click the Commits tab we should see our complete history of commits.
+<br/> <br/>
+Our local repository is now available on GitHub. So, anywhere we can access GitHub, we can access our repository. 
+</p>
+
+<h3> Cloning a remote repository</h3>
+<p>
+Now, let's do something drastic! 
+</p>
+<pre>
+</pre>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!--    <p>Select one or more columns of data from a table:</p>
-    <pre>SELECT column_name_1, column_name_2 FROM table_name;</pre> -->
 
   </div>
  
