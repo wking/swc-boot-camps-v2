@@ -1,9 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Using Databases and SQL
-level: novice
----
 Almost everyone has used spreadsheets,
 and almost everyone has eventually run up against their limitations.
 The more complicated a data set is,
