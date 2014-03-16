@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Creating Things
----
 <div class="objectives" markdown="1">
 
 #### Objectives

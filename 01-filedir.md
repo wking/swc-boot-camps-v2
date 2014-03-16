@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Files and Directories
----
 <div class="objectives" markdown="1">
 
 #### Objectives

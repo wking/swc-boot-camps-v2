@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Shell Scripts
----
 <div class="objectives" markdown="1">
 
 #### Objectives

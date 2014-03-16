@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Finding Things
----
 <div class="objectives" markdown="1">
 
 #### Objectives

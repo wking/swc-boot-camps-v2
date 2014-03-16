@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Introducing the Shell
----
 <div class="objectives" markdown="1">
 
 #### Objectives

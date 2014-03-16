@@ -1,8 +1,3 @@
----
-layout: lesson
-root: ../..
-title: Pipes and Filters
----
 <div class="objectives" markdown="1">
 
 #### Objectives
