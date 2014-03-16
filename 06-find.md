@@ -190,7 +190,7 @@ matched.  (-F is specified by POSIX.)
 >
 > `grep`'s real power doesn't come from its options, though; it comes from
 > the fact that patterns can include wildcards. (The technical name for
-> these is [regular expressions](../../gloss.html#regular-expression), which
+> these is [regular expressions](https://github.com/swcarpentry/bc/blob/master/gloss.md#regular-expression), which
 > is what the "re" in "grep" stands for.) Regular expressions are both complex
 > and powerful; if you want to do complex searches, please look at the lesson
 > on [our website](http://software-carpentry.org). As a taster, we can

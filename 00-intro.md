@@ -76,11 +76,11 @@ These devices only allowed input and output of the letters, numbers, and punctua
 so programming languages and interfaces had to be designed around that constraint.
 
 This kind of interface is called a
-[command-line interface](../../gloss.html#cli), or CLI,
+[command-line interface](https://github.com/swcarpentry/bc/blob/master/gloss.md#cli), or CLI,
 to distinguish it from the
-[graphical user interface](../../gloss.html#gui), or GUI,
+[graphical user interface](https://github.com/swcarpentry/bc/blob/master/gloss.md#gui), or GUI,
 that most people now use.
-The heart of a CLI is a [read-evaluate-print loop](../../gloss.html#repl), or REPL:
+The heart of a CLI is a [read-evaluate-print loop](https://github.com/swcarpentry/bc/blob/master/gloss.md#repl), or REPL:
 when the user types a command and then presses the enter (or return) key,
 the computer reads it,
 executes it,
@@ -92,7 +92,7 @@ This description makes it sound as though the user sends commands directly to th
 and the computer sends output directly to the user.
 In fact,
 there is usually a program in between called a
-[command shell](../../gloss.html#shell).
+[command shell](https://github.com/swcarpentry/bc/blob/master/gloss.md#shell).
 What the user types goes into the shell;
 it figures out what commands to run and orders the computer to execute them.
 

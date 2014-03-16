@@ -140,7 +140,7 @@ $ ls -s
 </div>
 
 Unfortunately,
-Unix reports sizes in [disk blocks](../../gloss.html#disk-block) by default,
+Unix reports sizes in [disk blocks](https://github.com/swcarpentry/bc/blob/master/gloss.md#disk-block) by default,
 which might be the least helpful default possible.
 If we add the `-h` flag,
 `ls` switches to more human-friendly units:
