@@ -8,9 +8,9 @@
 
 Nelle Nemo, a marine biologist,
 has just returned from a six-month survey of the
-[North Pacific Gyre](http://en.wikipedia.org/wiki/North_Pacific_Gyre),
+[North Pacific Gyre][gyre],
 where she has been sampling gelatinous marine life in the
-[Great Pacific Garbage Patch](http://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch).
+[Great Pacific Garbage Patch][patch].
 She has 1520 samples in all, and now needs to:
 
 1.  Run each sample through an assay machine
@@ -65,7 +65,7 @@ most of us use windows, icons, mice, and pointers.
 These technologies didn't become widespread until the 1980s,
 but their roots go back to Doug Engelbart's work in the 1960s,
 which you can see in what has been called
-"[The Mother of All Demos](http://www.youtube.com/watch?v=a11JDLBXtPQ)".
+"[The Mother of All Demos][demo]".
 
 Going back even further,
 the only way to interact with early computers was to rewire them.
@@ -76,11 +76,11 @@ These devices only allowed input and output of the letters, numbers, and punctua
 so programming languages and interfaces had to be designed around that constraint.
 
 This kind of interface is called a
-[command-line interface](https://github.com/swcarpentry/bc/blob/master/gloss.md#cli), or CLI,
+[command-line interface][cli], or CLI,
 to distinguish it from the
-[graphical user interface](https://github.com/swcarpentry/bc/blob/master/gloss.md#gui), or GUI,
+[graphical user interface][gui], or GUI,
 that most people now use.
-The heart of a CLI is a [read-evaluate-print loop](https://github.com/swcarpentry/bc/blob/master/gloss.md#repl), or REPL:
+The heart of a CLI is a [read-evaluate-print loop][repl], or REPL:
 when the user types a command and then presses the enter (or return) key,
 the computer reads it,
 executes it,
@@ -92,7 +92,7 @@ This description makes it sound as though the user sends commands directly to th
 and the computer sends output directly to the user.
 In fact,
 there is usually a program in between called a
-[command shell](https://github.com/swcarpentry/bc/blob/master/gloss.md#shell).
+[command shell][shell].
 What the user types goes into the shell;
 it figures out what commands to run and orders the computer to execute them.
 
@@ -130,3 +130,11 @@ being able to drive them is becoming a necessary skill.
     and how cryptic its commands and operation can be.
 
 </div>
+
+[gyre]: http://en.wikipedia.org/wiki/North_Pacific_Gyre
+[patch]: http://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch
+[demo]: http://www.youtube.com/watch?v=a11JDLBXtPQ
+[cli]: https://github.com/swcarpentry/bc/blob/master/gloss.md#cli
+[gui]: https://github.com/swcarpentry/bc/blob/master/gloss.md#gui
+[repl]: https://github.com/swcarpentry/bc/blob/master/gloss.md#repl
+[shell]: https://github.com/swcarpentry/bc/blob/master/gloss.md#shell
