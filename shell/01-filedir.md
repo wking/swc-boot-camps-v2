@@ -11,7 +11,7 @@
 </div>
 
 The part of the operating system responsible for managing files and directories
-is called the [file system](https://github.com/swcarpentry/bc/blob/master/gloss.md#filesystem).
+is called the [file system][file-system].
 It organizes our data into files,
 which hold information,
 and directories (also called "folders"),
@@ -27,7 +27,7 @@ $
 ~~~
 </div>
 
-The dollar sign is a [prompt](https://github.com/swcarpentry/bc/blob/master/gloss.md#prompt),
+The dollar sign is a [prompt][],
 which shows us that the shell is waiting for input;
 your shell may show something more elaborate.
 
@@ -59,14 +59,14 @@ Next,
 let's find out where we are by running a command called `pwd`
 (which stands for "print working directory").
 At any moment,
-our [current working directory](https://github.com/swcarpentry/bc/blob/master/gloss.md#current-working-directory)
+our [current working directory][cwd]
 is our current default directory,
 i.e.,
 the directory that the computer assumes we want to run commands in
 unless we explicitly specify something else.
 Here,
 the computer's response is `/users/vlad`,
-which is Vlad's [home directory](https://github.com/swcarpentry/bc/blob/master/gloss.md#home-directory):
+which is Vlad's [home directory][home]:
 
 <div class="in" markdown="1">
 ~~~
@@ -94,7 +94,7 @@ $ pwd
 
 To understand what a "home directory" is,
 let's have a look at how the file system as a whole is organized.
-At the top is the [root directory](https://github.com/swcarpentry/bc/blob/master/gloss.md#root-directory)
+At the top is the [root directory][root]
 that holds everything else.
 We refer to it using a slash character `/` on its own;
 this is the leading slash in `/users/vlad`.
@@ -148,7 +148,7 @@ solar.pdf    swc
 
 `ls` prints the names of the files and directories in the current directory in alphabetical order,
 arranged neatly into columns.
-We can make its output more comprehensible by using the [flag](https://github.com/swcarpentry/bc/blob/master/gloss.md#command-line-flag) `-F`,
+We can make its output more comprehensible by using the [flag][] `-F`,
 which tells `ls` to add a trailing `/` to the names of directories:
 
 <div class="in" markdown="1">
@@ -165,7 +165,7 @@ solar.pdf    swc/
 </div>
 
 Here,
-we can see that `/users/vlad` contains seven [sub-directories](https://github.com/swcarpentry/bc/blob/master/gloss.md#sub-directory).
+we can see that `/users/vlad` contains seven [sub-directories][subdir].
 The names that don't have trailing slashes,
 like `notes.txt`, `pizza.cfg`, and `solar.pdf`,
 are plain old files.
@@ -181,7 +181,7 @@ which doesn't exist.
 > almost anything else we want. However, most people use two-part names
 > most of the time to help them (and their programs) tell different kinds
 > of files apart. The second part of such a name is called the
-> [filename extension](https://github.com/swcarpentry/bc/blob/master/gloss.md#filename-extension), and indicates
+> [filename extension][ext], and indicates
 > what type of data the file holds: `.txt` signals a plain text file, `.pdf`
 > indicates a PDF document, `.cfg` is a configuration file full of parameters
 > for some program or other, and so on.
@@ -222,12 +222,12 @@ but it's a self-defeating strategy.
 Notice, by the way that we spelled the directory name `data`.
 It doesn't have a trailing slash:
 that's added to directory names by `ls` when we use the `-F` flag to help us tell things apart.
-And it doesn't begin with a slash because it's a [relative path](https://github.com/swcarpentry/bc/blob/master/gloss.md#relative-path),
+And it doesn't begin with a slash because it's a [relative path][rel],
 i.e., it tells `ls` how to find something from where we are,
 rather than from the root of the file system.
 
 If we run `ls -F /data` (*with* a leading slash) we get a different answer,
-because `/data` is an [absolute path](https://github.com/swcarpentry/bc/blob/master/gloss.md#absolute-path):
+because `/data` is an [absolute path][abs]:
 
 <div class="in" markdown="1">
 ~~~
@@ -344,7 +344,7 @@ $ cd ..
 `..` is a special directory name meaning
 "the directory containing this one",
 or more succinctly,
-the [parent](https://github.com/swcarpentry/bc/blob/master/gloss.md#parent-directory) of the current directory.
+the [parent][pardir] of the current directory.
 Sure enough,
 if we run `pwd` after running `cd ..`, we're back in `/users/vlad`:
 
@@ -392,7 +392,7 @@ but we'll see some uses for it soon.
 > if we are in `/users/vlad/data`,
 > the command `ls ..` will give us a listing of `/users/vlad`.
 > When the meanings of the parts are the same no matter how they're combined,
-> programmers say they are [orthogonal](https://github.com/swcarpentry/bc/blob/master/gloss.md#orthogonal):
+> programmers say they are [orthogonal][]:
 > Orthogonal systems tend to be easier for people to learn
 > because there are fewer special cases and exceptions to keep track of.
 
@@ -464,7 +464,7 @@ Pressing tab again does nothing,
 since there are 1520 possibilities;
 pressing tab twice brings up a list of all the files,
 and so on.
-This is called [tab completion](https://github.com/swcarpentry/bc/blob/master/gloss.md#tab-completion),
+This is called [tab completion][tab],
 and we will see it in many other tools as we go on.
 
 <div class="keypoints" markdown="1">
@@ -519,3 +519,17 @@ and we will see it in many other tools as we go on.
     4.  It produces an error message.
 
 </div>
+
+[file-system]: https://github.com/swcarpentry/bc/blob/master/gloss.md#filesystem
+[prompt]: https://github.com/swcarpentry/bc/blob/master/gloss.md#prompt
+[cwd]: https://github.com/swcarpentry/bc/blob/master/gloss.md#current-working-directory
+[home]: https://github.com/swcarpentry/bc/blob/master/gloss.md#home-directory
+[root]: https://github.com/swcarpentry/bc/blob/master/gloss.md#root-directory
+[flag]: https://github.com/swcarpentry/bc/blob/master/gloss.md#command-line-flag
+[subdir]: https://github.com/swcarpentry/bc/blob/master/gloss.md#sub-directory
+[ext]: https://github.com/swcarpentry/bc/blob/master/gloss.md#filename-extension
+[rel]: https://github.com/swcarpentry/bc/blob/master/gloss.md#relative-path
+[abs]: https://github.com/swcarpentry/bc/blob/master/gloss.md#absolute-path
+[pardir]: https://github.com/swcarpentry/bc/blob/master/gloss.md#parent-directory
+[orthogonal]: https://github.com/swcarpentry/bc/blob/master/gloss.md#orthogonal
+[tab]: https://github.com/swcarpentry/bc/blob/master/gloss.md#tab-completion

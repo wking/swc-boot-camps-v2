@@ -90,11 +90,11 @@ $ nano draft.txt
 > human-friendly media. We use it in examples because almost anyone can
 > drive it anywhere without training, but please use something more
 > powerful for real work. On Unix systems (such as Linux and Mac OS X),
-> many programmers use [Emacs](http://www.gnu.org/software/emacs/) or
-> [Vim](http://www.vim.org/) (both of which are completely unintuitive,
+> many programmers use [Emacs][] or
+> [Vim][] (both of which are completely unintuitive,
 > even by Unix standards), or a graphical editor such as
-> [Gedit](http://projects.gnome.org/gedit/). On Windows, you may wish to
-> use [Notepad++](http://notepad-plus-plus.org/).
+> [Gedit][]. On Windows, you may wish to
+> use [Notepad++][].
 > 
 > No matter what editor you use, you will need to know where it searches
 > for and saves files. If you start it from the shell, it will (probably)
@@ -494,3 +494,8 @@ thesis/quotations.txt
     In what order does `ls -R -t` display things?
 
 </div>
+
+[Emacs]: http://www.gnu.org/software/emacs/
+[Vim]: http://www.vim.org/
+[Gedit]: http://projects.gnome.org/gedit/
+[Notepad++]: http://notepad-plus-plus.org/
