@@ -1,53 +1,29 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: New York Public Library
+address: New York City
 country: United-States
-humandate: Feb 17-18, 2020
+humandate: Aug 6-7, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-06-06
+enddate: 2014-06-07
+latlng: 40.751901,-73.981692
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-helper: ["John von Neumann"]
-contact: admin@software-carpentry.org
+instructor: ["Cam Macdonell", "Greg Wilson", "Tim Cerino"]
+helper: []
+contact: gvwilson@software-carpentry.org
 ---
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
-
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="//github.com/swcarpentry/bc">github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
-
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
--->
-{% if page.eventbrite %}
-<iframe src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
-{% endif %}
-
 <h2>General Information</h2>
 
 <p>
   <a href="//software-carpentry.org">Software Carpentry</a>'s mission
-  is to help scientists and engineers become more productive
-  by teaching them basic lab skills for computing
-  like program design, version control, data management, and task automation.
-  This two-day hands-on bootcamp will cover basic concepts and tools;
-  participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
+  is to help researchers become more productive by teaching them basic
+  lab skills for computing like program design, version control, data
+  management, and task automation.  This two-day hands-on bootcamp
+  will cover basic concepts and tools; participants will be encouraged
+  to help one another and to apply what they have learned to their own
+  research problems.
 </p>
 
 <!-- This block displays the instructors' names if they are available. -->
@@ -73,7 +49,7 @@ contact: admin@software-carpentry.org
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The course is aimed at librarians and other information management professionals.
 </p>
 
 <!--
@@ -121,30 +97,23 @@ contact: admin@software-carpentry.org
 -->
 <h2>Schedule</h2>
 
-<div class="row-fluid">
-  <div class="span6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Building programs with Python</td> </tr>
-      <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-  <div class="span6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Version control with Git</td> </tr>
-      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Managing data with SQL</td> </tr>
-      <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-</div>
+<table class="table table-striped">
+  <tr> <td>Wednesday</td>  <td>09:00</td>  <td>Introduction to task automation with the Unix shell</td> </tr>
+  <tr> <td></td>        <td></td>       <td>Coffee break at 10:30.</td> </tr>
+  <tr> <td></td>        <td>11:15</td>  <td>More on the command-line</td> </tr>
+  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
+  <tr> <td></td>        <td>13:00</td>  <td>Programming basics with Python</td> </tr>
+  <tr> <td></td>        <td></td>       <td>Coffee break at 2:30.</td> </tr>
+  <tr> <td></td>        <td>15:00</td>  <td>Play with Python</td> </tr>
+  <tr> <td></td>        <td>16:15</td>  <td>Day 1 Wrap-up</td> </tr>
+  <tr> <td>Thursday</td> <td>09:00</td>   <td>Processing files in Python</td> </tr>
+  <tr> <td></td>        <td></td>       <td>Coffee break at 10:30.</td> </tr>
+  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
+  <tr> <td></td>        <td>13:00</td>  <td>Regular Expressions or Git</td> </tr>
+  <tr> <td></td>        <td></td>       <td>Coffee break at 14:30.</td> </tr>
+  <tr> <td></td>        <td>15:00</td>  <td>Putting it all together</td> </tr>
+  <tr> <td></td>        <td>16:15</td>  <td>Day 2 Wrap-up</td> </tr>
+</table>
 
 <hr/>
 
@@ -152,7 +121,7 @@ contact: admin@software-carpentry.org
     Edit this block to show what topics will be covered.
 -->
 <h2>Syllabus</h2>
-
+<p>Note that the following is a complete list of possible topics for bootcamps.  Some topics may not be covered.</p>
 <div class="row-fluid">
   <div class="span6">
     <h3>The Unix Shell</h3>
@@ -183,31 +152,20 @@ contact: admin@software-carpentry.org
 
 <div class="row-fluid">
   <div class="span6">
-    <h3>Version Control with Git</h3>
+    <h3>Working with Excel</h3>
     <ul>
-      <li>Creating a repository</li>
-      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
-      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
-      <li><a href="novice/ref/02-git.html">Reference...</a></li>
+      <li>Exporting to plain-text CSV</li>
+      <li>Processing with command-line tools: <code>grep</code>,<code>cut</code>, ...</li>
+      <li>Processing with Python</li>
+      <li>Cleaning data</li>
+      <li><a href="novice/ref/05-excel.html">Reference...</a></li>
     </ul>
   </div>
   <div class="span6">
-    <h3>Managing Data with SQL</h3>
+    <h3>If time allows...</h3>
     <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="novice/ref/04-sql.html">Reference...</a></li>
+      <li>Reading MARC21 files using <code>pymarc</code></li>
+      <li>Generating HTML from data</li>
     </ul>
   </div>
 </div>
