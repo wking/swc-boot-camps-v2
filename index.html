@@ -53,20 +53,6 @@ contact: gvwilson@software-carpentry.org
 </p>
 
 <!--
-    This block displays the address and links to a map showing directions.
--->
-{% if page.latlng %}
-<p>
-  <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
-</p>
-{% endif %}
-
-<!--
     Modify the block below if there are any special requirements.
 -->
 <p>
@@ -88,6 +74,24 @@ contact: gvwilson@software-carpentry.org
     <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
   {% endif %}
   for more information.
+</p>
+
+<hr/>
+
+<h2>Location</h2>
+
+<p>
+  This workshop will be held at the New York Public Library at 5th Ave and 42nd St, New York, NY 10018 (see <a href="https://www.google.com/maps/place/New+York+Public+Library/@40.753182,-73.982253,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x3b51df6e509a734c">this map</a>).
+  Since we are starting outside normal opening hours,
+  please enter at the 42nd Street Entrance to the building (which is at 2 West 42nd Street)
+  rather than trying to enter between the lions at the main entrance.
+  If for any reason you're unable to get in,
+  please call us at 203.521.1222.
+</p>
+<p>
+  We will be split between the Berger Forum and Trustees Rooms,
+  both of which are on the second floor.
+  There will be signs specifically for Software Carpentry attendees.
 </p>
 
 <hr/>
